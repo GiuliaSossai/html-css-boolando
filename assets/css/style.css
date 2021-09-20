@@ -7,7 +7,7 @@
 .container {
   width: 80%;
   min-height: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: red;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -18,16 +18,15 @@
   content: "";
   display: table;
   clear: both;
-  position: absolute;
-  left: 0;
-  bottom: 20px;
+}
+
+.box {
+  width: calc(100% / 3 - 4px);
+  display: inline-block;
 }
 
 .model {
-  width: 20%;
-  display: inline-block;
   position: relative;
-  background-size: cover;
 }
 
 .model .img-hover {
@@ -42,14 +41,12 @@
   display: block;
 }
 
-.model img {
+.model img{
   width: 100%;
-  background-size: cover;
 }
 
-.model:hover, .model.active img {
+.model:hover {
   cursor: pointer;
-  background-image: none;
 }
 
 .model .square {
@@ -74,8 +71,13 @@
   text-align: center;
   height: 20px;
   padding: 2px;
-  display: inline-block;
   margin-right: 3px;
+}
+
+.label-container {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
 }
 
 .model .red.label {
