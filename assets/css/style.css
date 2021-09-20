@@ -18,26 +18,41 @@
   content: "";
   display: table;
   clear: both;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
 }
 
-img {
+.model {
+  width: 20%;
+  display: inline-block;
+  position: relative;
+  background-size: cover;
+}
+
+.model .img-hover {
+  display: none;
+}
+
+.model:hover .img-front {
+  display: none;
+}
+
+.model:hover .img-hover {
+  display: block;
+}
+
+.model img {
   width: 100%;
   background-size: cover;
 }
 
-.image {
-  width: calc(100% / 3);
-  margin: 1%;
-  display: inline-block;
-  position: relative;
-}
-
-.image:hover {
+.model:hover, .model.active img {
   cursor: pointer;
   background-image: none;
 }
 
-.image .square {
+.model .square {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -47,12 +62,12 @@ img {
   right: 0;
 }
 
-.image .square::after {
+.model .square::after {
   content: '\2764';
   line-height: 50px;
 }
 
-.image .label {
+.model .label {
   color: white;
   font-size: 14px;
   font-weight: bold;
@@ -63,18 +78,13 @@ img {
   margin-right: 3px;
 }
 
-.image .red.label {
+.model .red.label {
   background-color: red;
-  position: absolute;
-  left: 0;
-  bottom: 10px;
   float: left;
 }
 
-.image .green.label {
+.model .green.label {
   background-color: green;
-  position: absolute;
-  bottom: 10px;
   float: left;
 }
 
