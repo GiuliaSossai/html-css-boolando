@@ -14,44 +14,55 @@
 }
 
 
-/*utilities*/
+/*********UTILITIES++++++++++*/
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.box {
-  width: calc(100% / 3 - 4px);
+/*struttura delle righe*/
+.row {
+  text-align: center;
+}
+
+.content-box {
+  width: 32%; /*calc(100% / 3 - 4px);*/
   display: inline-block;
   padding-bottom: 30px;
 }
 
-.model {
+.content-box.middle {
+  margin: 0 10px;
+}
+
+
+/*immagini e loro contenuto*/
+.image-content {
   position: relative;
 }
 
-.model .img-hover {
-  display: none;
-}
-
-.model:hover .img-front {
-  display: none;
-}
-
-.model:hover .img-hover {
-  display: block;
-}
-
-.model img{
+.image-content img{
   width: 100%;
 }
 
-.model:hover {
+.image-content:hover {
   cursor: pointer;
 }
 
-.model .square {
+.image-content .img-hover {
+  display: none;
+}
+
+.image-content:hover .img-front {
+  display: none;
+}
+
+.image-content:hover .img-hover {
+  display: block;
+}
+
+.image-content .square {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -61,12 +72,12 @@
   right: 0;
 }
 
-.model .square::after {
+.image-content .square::after {
   content: '\2764';
   line-height: 50px;
 }
 
-.model .label {
+.image-content .label {
   color: white;
   font-weight: bold;
   text-align: center;
@@ -81,29 +92,32 @@
   bottom: 10px;
 }
 
-.model .red.label {
+.image-content .red.label {
   background-color: red;
   float: left;
 }
 
-.model .green.label {
+.image-content .green.label {
   background-color: green;
   float: left;
 }
 
+
+/*caption immagini*/
 .image-text {
+  text-align: left;
   padding-top: 5px;
 }
 
-h4 {
+.image-text h4 {
   text-transform: uppercase;
 }
 
-.red {
+.image-text .red {
   color: red;
 }
 
-.erased {
+.image-text .erased {
   text-decoration: line-through;
 }
 
