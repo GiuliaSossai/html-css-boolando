@@ -9,17 +9,73 @@
   min-height: 900px;
   margin: 0 auto;
   background-color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 /*utilities*/
-.box {
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  width: 100%;
+  background-size: cover;
+}
+
+.image {
   width: calc(100% / 3);
-  height: 500px;
   margin: 1%;
   display: inline-block;
-  background-color: #blue;
-  background-size: cover;
   position: relative;
 }
+
+.image:hover {
+  cursor: pointer;
+  background-image: none;
+}
+
+.image .square {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.image .square::after {
+  content: '\2764';
+  line-height: 50px;
+}
+
+.image .label {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  height: 20px;
+  padding: 2px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.image .red.label {
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  float: left;
+}
+
+.image .green.label {
+  background-color: green;
+  position: absolute;
+  bottom: 10px;
+  float: left;
+}
+
 
