@@ -99,8 +99,11 @@ h4 {
   text-transform: uppercase;
 }
 
-.erased {
+.red {
   color: red;
+}
+
+.erased {
   text-decoration: line-through;
 }
 
